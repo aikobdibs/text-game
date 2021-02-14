@@ -10,6 +10,8 @@ let progress = []
 let timeout = 3000
 let i = 0;  
 let start = document.querySelector(".start")
+let loading = document.querySelector(".lds-ellipsis")
+loading.style.display = "none"
 
 start.addEventListener("click" ,function(){
   document.getElementById("backgroundmusic").loop = true;
@@ -44,7 +46,7 @@ fetch("./db.json")
         localStorage.setItem(position, now);
       }
       }
-     
+      loading.style.display = "inline-block"
 
      
       setTimeout(function() {  
@@ -61,14 +63,19 @@ fetch("./db.json")
         if(i == lenght){
           let lenght = data[position].lenght[0]
           if(data[position].dialog[lenght[0]].delay === true){
+          
             checkTimeout()     
           }else{
+            
             setTimeout(() => {
               loadAnswers()
             }, timeout);
           }  
         }                     
       }, timeout)
+
+     
+
   }
 
   
@@ -213,6 +220,7 @@ fetch("./db.json")
     function loadText1(){
      
       let lenght = data[position].lenght[1]
+      loading.style.display = "inline-block"
     
       setTimeout(function() {  
         
@@ -228,6 +236,7 @@ fetch("./db.json")
         if(i == lenght){
          
           setTimeout(() => {
+            
             loadAnswers()
           }, timeout);
          
@@ -286,6 +295,8 @@ fetch("./db.json")
 
     }
     function loadAnswers() {
+      loading.style.display = "none"
+      
       lenght = data[position].lenght
       i = 0;    
       var optionsE = document.createElement("div");
@@ -343,6 +354,7 @@ fetch("./db.json")
     }
     
     function checkTimeout(){
+     
       let lenght = data[position].lenght[0]
   
       if(data[position].dialog[lenght[0]].delay === true){
@@ -353,6 +365,7 @@ fetch("./db.json")
           localStorage.setItem(position, now);
           setTimeout(() => {
             countdown();
+            loading.style.display = "none"
           }, timeout);
           
         }else if (localStorage.getItem(position) !== null){
@@ -360,6 +373,7 @@ fetch("./db.json")
       
           setTimeout(() => {
             countdown();
+            loading.style.display = "none"
           }, timeout);
         }
           
