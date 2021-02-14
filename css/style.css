@@ -44,7 +44,7 @@ nav{
   max-width: 536px;
   padding: 0px 16px;
   height: 100%;
-
+  background-color: white;
   overflow-y: scroll;
 
 }
