@@ -1,0 +1,136 @@
+* {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.main {
+  width: 100%;
+  max-width: 536px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.app{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+nav{
+  height: 5vh;
+  width: 100%;
+  max-width: 536px;
+  padding: 0px 48px;
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  height: 95%;
+  width: 100%;
+  max-width: 536px;
+  padding: 32px 32px;
+  background-color: #202020;
+  padding-top: 0px;
+}
+
+.innerdisplay {
+  width: 100%;
+  max-width: 536px;
+  padding: 0px 16px;
+  height: 100%;
+
+  overflow-y: scroll;
+
+}
+.options {
+  width: 100%;
+ 
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.dialog {
+  width: 100%;
+  height: min-content;
+  padding: 10px;
+  margin: 10px 0px;
+  display: flex;
+  color: white;
+  background-color: #404040;
+  border-radius: 10px;
+  color: white;
+}
+.busy {
+  width: 100%;
+  height: min-content;
+  padding: 10px;
+  margin: 10px 0px;
+ 
+  color: white;
+  background-color: #404040;
+  border-radius: 10px;
+  color: green;
+  text-align: center ;
+}
+
+.option1,
+.option2 {
+  width: 49%;
+}
+.section{
+  height: 100%;
+
+ 
+}
+
+button{
+ background-color: gray;
+ border-radius: 10px;
+ border: none;
+
+ padding: 10px 0px;
+
+}
+button:focus{
+ outline: none;
+}
+.active {
+  background-color: white;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+::-webkit-scrollbar-thumb:vertical {
+  -moz-appearance: none !important;
+  max-height: 100px;
+}
+
+.fas{
+  color: white;
+  cursor: pointer;
+}
+
+.chosen{
+  background-color: lightseagreen;
+}

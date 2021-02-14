@@ -1,0 +1,17 @@
+{
+  "name": "text-game",
+  "version": "1.0.0",
+  "description": "hey",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node.js": "^0.0.1-security",
+    "require.js": "^1.0.0",
+    "requirejs": "^2.3.6",
+    "soundmanager2": "^2.97.20170602"
+  }
+}

@@ -1,0 +1,122 @@
+ [
+    {
+        "answers":[
+            {"title":"Yes i got your messages","response":1},
+            {"title":"Who are you?","response":2}
+            ],
+        "dialog":[
+                "Hello ?",
+                "Does this old machine still work...",
+                "Does anyone copy?",
+                {"delay":false}
+            ],
+        "lenght":[
+                "3"
+            ]
+    },
+    {
+        "answers":[
+            {"title":"Who are you?","response":2},
+            {"title":"What happened?","response":4}
+            ],
+        "dialog":[
+                "Oh wow! that helps alot",
+                "It has been a long time",
+                {"delay":false}
+            ],
+        "lenght":[
+                "2"
+            ]
+        
+    },
+    {
+        "answers":[
+            {"title":"The flux?","response":3},
+            {"title":"What happened?","response":3}
+            ],
+        "dialog":[
+                "Sorry, I should have probably said that first",
+                "litlle exited that's all...",
+                "My name is victor. I am a submarainer of the ship named Flux.",
+                {"delay":false}
+            ],
+        "lenght":[
+                "3"
+            ]
+    },
+    {
+        "answers":[
+            {"title":"Will they come look for you?","response":5},
+            {"title":"Do you have a map?","response":6}
+            ],
+        "dialog":[
+                "The Flux was a state of the art submarine. The most advanced on earth... Or so they said",
+                "There was a slight problem however... The power suply has run out",
+                "I am the only one on board because everything is autonimous, I was just here to observe in case of an emergency...",
+                "And well an emergency I got..",
+                "I have no idea what to do now and no idea where I am",
+                {"delay":false}
+            ],
+        "lenght":[
+                "5"
+            ]
+    },
+    {
+        "answers":[
+            {"title":"Will they come look for you?","response":5},
+            {"title":"Do you have a map?","response":6}
+            ],
+        "dialog":[
+                "My name is victor. I am a submarainer of the ship named Flux.",
+                "The Flux was a state of the art submarine. The most advanced on earth... Or so they said",
+                "There was a slight problem however... The power suply has run out",
+                "I am the only one on board because everything is autonimous, I was just here to observe in case of an emergency...",
+                "And well an emergency I got..",
+                "I have no idea what to do now and no idea where I am",
+                {"delay":false}
+            ],
+        "lenght":[
+                "5"
+            ]
+    },
+    {
+        "answers":[
+            {"title":"I'm sure they will","response":7},
+            {"title":"I don't think so...","response":8}
+            ],
+        "dialog":[
+                "I think so, maybe not for me but surely for their expensive submarine",
+                "Hope they know where I am or atleast that their ship is dead",
+                "They will find me... no?",
+                {"delay":false}
+            ],
+        "lenght":[
+                "3"
+            ]
+    },
+    {
+        "answers":[
+            {"title":"Can you locate yourself with it?","response":7},
+            {"title":"Is that any usefull?","response":8}
+            ],
+        "dialog":[
+                "As a matter of fact yes I do. Atleast there should be a map on the main deck",
+                "Just need to find it in this mess...",
+                "It can take a while tho. I'll message you when I found it, or not..",
+               
+                {"delay":true, "time":120}
+            ],
+        "lenght":[
+                "3","3"
+            ],
+            "dialog1":[
+            
+                "Few finaly found it, was getting a litlle worried around here...",
+                "It was hidden in a littlle compartment under the head desk.",
+                "Looks like I got a map of how the sea bottom scans.",
+                {"delay":false}
+            ]
+    }
+   
+    ]
+    
