@@ -44,10 +44,13 @@ fetch("./db.json")
       var scrollPercentage =
         (100 * innerdisplay.scrollTop) /
         (innerdisplay.scrollHeight - innerdisplay.clientHeight);
-      if (scrollPercentage >= 99.5) {
+      if (scrollPercentage >= 99) {
         scroll = true;
       } else {
         scroll = false;
+      }
+      if (Number.isNaN(scrollPercentage) === true) {
+        scroll = true;
       }
 
       loading.style.display = "inline-block";
@@ -60,9 +63,8 @@ fetch("./db.json")
         var scrollPercentage =
           (100 * innerdisplay.scrollTop) /
           (innerdisplay.scrollHeight - innerdisplay.clientHeight);
-        if (scrollPercentage >= 99.5) {
+        if (scrollPercentage >= 99) {
           scroll = true;
-          console.log("here");
         } else {
           scroll = false;
         }
@@ -211,17 +213,43 @@ fetch("./db.json")
       }
     }
 
-    loadProgress();
-
     function loadText1() {
       let lenght = data[position].lenght[1];
+      var scrollPercentage =
+        (100 * innerdisplay.scrollTop) /
+        (innerdisplay.scrollHeight - innerdisplay.clientHeight);
+      if (scrollPercentage >= 99) {
+        scroll = true;
+      } else {
+        scroll = false;
+      }
+      if (Number.isNaN(scrollPercentage) === true) {
+        scroll = true;
+      }
       loading.style.display = "inline-block";
+      if (scroll) {
+        innerdisplay.scrollTop = innerdisplay.scrollHeight;
+      }
 
       setTimeout(function () {
+        var scrollPercentage =
+          (100 * innerdisplay.scrollTop) /
+          (innerdisplay.scrollHeight - innerdisplay.clientHeight);
+        if (scrollPercentage >= 99) {
+          scroll = true;
+        } else {
+          scroll = false;
+        }
+        if (Number.isNaN(scrollPercentage) === true) {
+          scroll = true;
+        }
         var textE = document.createElement("div");
         textE.className = "dialog";
         textE.innerText = data[position].dialog1[i];
         display.appendChild(textE);
+        if (scroll) {
+          innerdisplay.scrollTop = innerdisplay.scrollHeight;
+        }
         i++;
         if (i < lenght) {
           loadText1();
@@ -262,18 +290,46 @@ fetch("./db.json")
       let lenght = data[position].lenght[0];
 
       for (e = 0; e < lenght; e++) {
+        var scrollPercentage =
+          (100 * innerdisplay.scrollTop) /
+          (innerdisplay.scrollHeight - innerdisplay.clientHeight);
+        if (scrollPercentage >= 99) {
+          scroll = true;
+          console.log("scroll");
+        } else {
+          scroll = false;
+        }
+        if (Number.isNaN(scrollPercentage) === true) {
+          scroll = true;
+        }
         var textE = document.createElement("div");
         textE.className = "dialog";
         textE.innerText = data[position].dialog1[e];
         display.appendChild(textE);
+        if (scroll) {
+          innerdisplay.scrollTop = innerdisplay.scrollHeight;
+        }
       }
       loadAnswers();
     }
     function loadAnswers() {
+      var scrollPercentage =
+        (100 * innerdisplay.scrollTop) /
+        (innerdisplay.scrollHeight - innerdisplay.clientHeight);
       loading.style.display = "none";
 
       lenght = data[position].lenght;
       i = 0;
+
+      if (scrollPercentage >= 99) {
+        scroll = true;
+        console.log("scroll");
+      } else {
+        scroll = false;
+      }
+      if (Number.isNaN(scrollPercentage) === true) {
+        scroll = true;
+      }
       var optionsE = document.createElement("div");
       optionsE.classList = "options";
       var option1E = document.createElement("button");
@@ -290,6 +346,9 @@ fetch("./db.json")
       option2E.innerHTML = ` ${data[position].answers[1].title}`;
 
       display.appendChild(optionsE);
+      if (scroll) {
+        innerdisplay.scrollTop = innerdisplay.scrollHeight;
+      }
 
       option1E.addEventListener("click", function () {
         if (option1E.classList.contains("active")) {
@@ -344,11 +403,25 @@ fetch("./db.json")
       }
     }
     function countdown() {
+      var scrollPercentage =
+        (100 * innerdisplay.scrollTop) /
+        (innerdisplay.scrollHeight - innerdisplay.clientHeight);
+      if (scrollPercentage >= 99) {
+        scroll = true;
+      } else {
+        scroll = false;
+      }
+      if (Number.isNaN(scrollPercentage) === true) {
+        scroll = true;
+      }
       var Busy = document.createElement("div");
       Busy.className = "busy";
       Busy.innerText = "[Victor is busy]";
       display.appendChild(Busy);
 
+      if (scroll) {
+        innerdisplay.scrollTop = innerdisplay.scrollHeight;
+      }
       function countdowncheck() {
         setTimeout(function () {
           now = Date.now() / 1000;
@@ -371,4 +444,6 @@ fetch("./db.json")
       }
       countdowncheck();
     }
+
+    loadProgress();
   });
